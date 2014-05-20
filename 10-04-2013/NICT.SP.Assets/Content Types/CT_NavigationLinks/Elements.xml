@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100ADBCB8066D794704B4F4387CF0AE815A" Name="CT_NavigationLinks" Group="NICT Content Types" Description="Navigation Links Content Type" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{2095AB68-B343-449A-ACF1-A5F183CC0BBA}" DisplayName="Sort Sequence" Required="TRUE" Name="Sort_Sequence" />
+      <FieldRef ID="{3C15F97D-5EF1-4EA0-B5D9-71C36451D1D0}" DisplayName="Link Url" Required="FALSE" Name="LinkUrl" />
+      <FieldRef ID="{147EAA42-D052-474E-A08B-0C7847BA3D4E}" DisplayName="Open In New Window" Name="Open_In_New_Window" />
+      <FieldRef ID="{D297A1DE-8A9D-4D56-9D8D-50B33721332A}" DisplayName="Navigation Level" Required="FALSE" Name="Navigation_Level" />
+      <FieldRef ID="{F0893924-EB69-4E24-869A-BEFA256DA474}" DisplayName="Hide This Link" Name="Hide_This_Link" />
+      <FieldRef ID="{5DB9CE98-26E7-4A64-B8AD-A10D626BFCE1}" DisplayName="Parent Link" Required="FALSE" Name="Parent_Link" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

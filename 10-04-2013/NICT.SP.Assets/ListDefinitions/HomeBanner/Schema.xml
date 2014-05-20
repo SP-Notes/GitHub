@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Home Banner" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/NICT.SP.Assets-HomeBanner" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100cb6838b2897f44dea7292f879546c8d7" Name="CT_HomeBanner" Group="NICT Content Types" Description="Home Banner Content Type" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          <FieldRef DisplayName="Picture" Required="TRUE" Format="Image" ID="{e7e9f850-56a3-4462-8dc7-f4eb00e0a4e9}" Name="Picture" />
+          <FieldRef DisplayName="Header" Required="FALSE" ID="{9f6c98ed-5f57-4518-a7ec-6a224bb2e2c1}" Name="Header" />
+          <FieldRef DisplayName="Description" Required="FALSE" ID="{506e4c07-64b1-498f-bc7c-362cfa129521}" Name="Description" />
+          <FieldRef DisplayName ="Sort Sequence" Required="TRUE" ID="{2095AB68-B343-449A-ACF1-A5F183CC0BBA}" Name ="Sort_Sequence" />
+          <FieldRef DisplayName="Visibility" ID="{2D8BDD98-70C1-4F10-BF62-4478FEE42DFA}" Name="Visbility"/>
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field Group="NICT Site Columns" Type="URL" DisplayName="Picture" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Image" ID="{e7e9f850-56a3-4462-8dc7-f4eb00e0a4e9}" StaticName="Picture" Name="Picture" />
+      <Field Group="NICT Site Columns" Type="Text" DisplayName="Header" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{9f6c98ed-5f57-4518-a7ec-6a224bb2e2c1}" StaticName="Header" Name="Header" />
+		<Field Group="NICT Site Columns" Type="Note" DisplayName="Description"  Required="FALSE" ID="{506e4c07-64b1-498f-bc7c-362cfa129521}"  NumLines="40" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" StaticName="Description" Name="Description"/>
+      <Field Group="NICT Site Columns" Type="Number" DisplayName ="Sort Sequence" Required="TRUE" ID="{2095AB68-B343-449A-ACF1-A5F183CC0BBA}" StaticName="Sort_Sequence" Name ="Sort_Sequence" />
+      <Field Group="NICT Site Columns" Type="Boolean" DisplayName="Visibility" ID="{2D8BDD98-70C1-4F10-BF62-4478FEE42DFA}" Name="Visbility">
+        <Default>0</Default>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+          <FieldRef Name="Picture" />
+          <FieldRef Name="Header" />
+          <FieldRef Name="Description" />
+          <FieldRef Name ="Sort_Sequence" />
+          <FieldRef Name="Visbility"/>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="Attachments"></FieldRef>
+          <FieldRef Name="LinkTitle"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

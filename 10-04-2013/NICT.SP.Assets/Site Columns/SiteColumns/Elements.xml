@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <!--Common Start-->
+  <Field Group="NICT Site Columns" Type="Number" DisplayName ="Sort Sequence" Required="TRUE" ID="{2095AB68-B343-449A-ACF1-A5F183CC0BBA}" StaticName="Sort_Sequence" Name ="Sort_Sequence" />
+  <Field Group="NICT Site Columns" Type="Boolean" DisplayName="Visibility" ID="{2D8BDD98-70C1-4F10-BF62-4478FEE42DFA}" Name="Visbility">
+    <Default>0</Default>
+  </Field>
+  <!--Common End-->
+  
+  <!--Navigation Links Start-->
+  <Field Group="NICT Site Columns" Type="URL" DisplayName="Link Url" ID="{3C15F97D-5EF1-4EA0-B5D9-71C36451D1D0}" Name="LinkUrl" Format="Hyperlink" Required="FALSE"  />
+  <Field Group="NICT Site Columns" Type="Lookup"  DisplayName="Parent Link" ID="{5DB9CE98-26E7-4A64-B8AD-A10D626BFCE1}" List="Self" Name="Parent_Link" Required="FALSE" SourceID="{8c90da64-7409-44d8-a2bc-51f211cea490}"/>
+  <Field Group="NICT Site Columns" Type="Number" DisplayName ="Navigation Level" Required="FALSE" ID="{D297A1DE-8A9D-4D56-9D8D-50B33721332A}" StaticName="Navigation_Level" Name ="Navigation_Level" />  
+  <Field Group="NICT Site Columns" Type="Boolean" DisplayName="Open In New Window" ID="{147EAA42-D052-474E-A08B-0C7847BA3D4E}" Name="Open_In_New_Window">
+    <Default>0</Default>
+  </Field>  
+  <Field Group="NICT Site Columns" Type="Boolean" DisplayName="Hide This Link" ID="{F0893924-EB69-4E24-869A-BEFA256DA474}" Name="Hide_This_Link">
+    <Default>0</Default>
+  </Field>
+  <!--Navigation Links End-->
+
+  <!--HomeBanner Webpart Start-->  
+  <Field Group="NICT Site Columns" Type="URL" DisplayName="Picture" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Image" ID="{e7e9f850-56a3-4462-8dc7-f4eb00e0a4e9}" StaticName="Picture" Name="Picture" />
+  <Field Group="NICT Site Columns" Type="Text" DisplayName="Header" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{9f6c98ed-5f57-4518-a7ec-6a224bb2e2c1}" StaticName="Header" Name="Header" />
+  <Field Group="NICT Site Columns" Type="Note" DisplayName="Description"  Required="FALSE" ID="{506e4c07-64b1-498f-bc7c-362cfa129521}"  NumLines="40" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" StaticName="Description" Name="Description"/>
+  <!--HomeBanner Webpart End-->
+  
+</Elements>

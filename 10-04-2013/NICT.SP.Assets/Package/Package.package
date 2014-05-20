@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="fb3c5882-9f2a-4311-bebd-69de74aab494" solutionId="fb3c5882-9f2a-4311-bebd-69de74aab494" resetWebServer="false" name="NICT.SP.Assets" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="529fbd29-bd38-46a5-ad09-f315fcf3d586" />
+    <featureReference itemId="8c1a5c30-9ae4-47e2-b395-b815d3bf1e3d" />
+    <featureReference itemId="b114b99e-8c5f-4eba-9443-d93a4ef356ac" />
+  </features>
+</package>

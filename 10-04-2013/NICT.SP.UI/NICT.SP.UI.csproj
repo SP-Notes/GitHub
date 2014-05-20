@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78254251-9E08-49B1-BF1A-290713FB4F51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NICT.SP.UI</RootNamespace>
+    <AssemblyName>NICT.SP.UI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\NICT.SP.UIFeature\NICT.SP.UIFeature.feature">
+      <FeatureId>{ac742882-b731-4794-899d-e3bdc79595f3}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="MasterPages\NICTMain.master" />
+    <None Include="MasterPages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{969b53fe-defd-40dc-a522-a8f5adee559b}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{5bd09c3c-d956-44f2-86ac-040c2d8deada}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="PageLayouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{09adad28-332b-4853-9e4b-257a14f94296}</SharePointProjectItemId>
+    </None>
+    <None Include="UIFiles\fonts\IczWvq5y_Cwwv_rBjOtT0w.woff" />
+    <None Include="UIFiles\fonts\JbtMzqLaYbbbCL9X6EvaIxsxEYwM7FgeyaSgU71cLG0.woff" />
+    <None Include="UIFiles\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e89ed129-ee3c-42bb-a31a-bcfd26ffb71a}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\NICT.SP.UIFeature\NICT.SP.UIFeature.Template.xml">
+      <DependentUpon>NICT.SP.UIFeature.feature</DependentUpon>
+    </Content>
+    <Content Include="MasterPages\Elements.xml" />
+    <Content Include="PageLayouts\Elements.xml" />
+    <Content Include="PageLayouts\Home.aspx" />
+    <Content Include="UIFiles\CSS\bjqs.css" />
+    <Content Include="UIFiles\CSS\bootstrap.min.css" />
+    <Content Include="UIFiles\CSS\bootstrapf43b.css" />
+    <Content Include="UIFiles\CSS\cache.skinf43b.css" />
+    <Content Include="UIFiles\CSS\css.css" />
+    <Content Include="UIFiles\CSS\css1.css" />
+    <Content Include="UIFiles\CSS\css2.css" />
+    <Content Include="UIFiles\CSS\font-awesomef43b.css" />
+    <Content Include="UIFiles\CSS\icomoonf43b.css" />
+    <Content Include="UIFiles\CSS\style.css" />
+    <Content Include="UIFiles\Elements.xml" />
+    <Content Include="UIFiles\fonts\icomoon.svg" />
+    <Content Include="UIFiles\img\social_icons\banner01.jpg" />
+    <Content Include="UIFiles\img\social_icons\banner02.jpg" />
+    <Content Include="UIFiles\img\social_icons\banner03.jpg" />
+    <Content Include="UIFiles\img\social_icons\body_back.jpg" />
+    <Content Include="UIFiles\img\social_icons\facebook_icon.png" />
+    <Content Include="UIFiles\img\social_icons\google_icon.png" />
+    <Content Include="UIFiles\img\social_icons\linkedin_icon.png" />
+    <Content Include="UIFiles\img\social_icons\nict_logo.png" />
+    <Content Include="UIFiles\img\social_icons\social_icon.png" />
+    <Content Include="UIFiles\img\social_icons\twitter_icon.png" />
+    <Content Include="UIFiles\js\bjqs-1.3.js" />
+    <Content Include="UIFiles\js\bootstrap.min.js" />
+    <Content Include="UIFiles\js\jquery.min.js" />
+    <Content Include="UIFiles\js\jquery3e5a.js" />
+    <Content Include="UIFiles\js\menu_functionsf43b.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>

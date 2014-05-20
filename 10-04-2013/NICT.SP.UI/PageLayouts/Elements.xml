@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="PageLayouts" Url="_catalogs/masterpage">
+    <File Path="PageLayouts\Home.aspx" Url="Home.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="NICT Homepage" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;"></Property>
+      <Property Name="FeatureId" Value="$SharePoint.Feature.Id$" Type="string"/>
+      <Property Name="UIVersion" Value="3" />
+    </File>
+</Module>
+</Elements>

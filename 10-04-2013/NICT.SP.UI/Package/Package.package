@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5bd09c3c-d956-44f2-86ac-040c2d8deada" solutionId="5bd09c3c-d956-44f2-86ac-040c2d8deada" resetWebServer="false" name="NICT.SP.UI" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="ac742882-b731-4794-899d-e3bdc79595f3" />
+  </features>
+</package>

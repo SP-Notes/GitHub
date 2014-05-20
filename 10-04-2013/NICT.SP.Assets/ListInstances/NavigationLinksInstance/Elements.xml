@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance 
+    Title="NavigationLinks" 
+    OnQuickLaunch="TRUE" 
+    TemplateType="10000" 
+    Url="Lists/NavigationLinks" 
+    Description="Navigation Links List Instance" 
+    FeatureId="4c459abd-3818-4053-baa1-5ee0e0e82b1c">    
+  </ListInstance>
+</Elements>

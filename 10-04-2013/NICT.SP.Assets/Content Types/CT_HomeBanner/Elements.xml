@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100cb6838b2897f44dea7292f879546c8d7" Name="CT_HomeBanner" Group="NICT Content Types" Description="Home Banner Content Type" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef DisplayName="Picture" Required="TRUE" Format="Image" ID="{e7e9f850-56a3-4462-8dc7-f4eb00e0a4e9}" Name="Picture" />
+      <FieldRef DisplayName="Header" Required="FALSE" ID="{9f6c98ed-5f57-4518-a7ec-6a224bb2e2c1}" Name="Header" />
+      <FieldRef DisplayName="Description" Required="FALSE" ID="{506e4c07-64b1-498f-bc7c-362cfa129521}" Name="Description" />
+      <FieldRef DisplayName ="Sort Sequence" Required="TRUE" ID="{2095AB68-B343-449A-ACF1-A5F183CC0BBA}" Name ="Sort_Sequence" />
+      <FieldRef DisplayName="Visibility" ID="{2D8BDD98-70C1-4F10-BF62-4478FEE42DFA}" Name="Visbility"/>
+    </FieldRefs>
+  </ContentType>
+</Elements>

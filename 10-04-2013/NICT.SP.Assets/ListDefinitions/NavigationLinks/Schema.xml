@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="NavigationLinks" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/NavigationLinks" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100ADBCB8066D794704B4F4387CF0AE815A" Name="CT_NavigationLinks" Group="NICT Content Types" Description="Navigation Links Content Type" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          <FieldRef ID="{2095AB68-B343-449A-ACF1-A5F183CC0BBA}" DisplayName="Sort Sequence" Required="TRUE" Name="Sort_Sequence" />
+          <FieldRef ID="{3C15F97D-5EF1-4EA0-B5D9-71C36451D1D0}" DisplayName="Link Url" Required="FALSE" Name="LinkUrl" />
+          <FieldRef ID="{147EAA42-D052-474E-A08B-0C7847BA3D4E}" DisplayName="Open In New Window" Name="Open_In_New_Window" />
+          <FieldRef ID="{D297A1DE-8A9D-4D56-9D8D-50B33721332A}" DisplayName="Navigation Level" Required="FALSE" Name="Navigation_Level" />
+          <FieldRef ID="{F0893924-EB69-4E24-869A-BEFA256DA474}" DisplayName="Hide This Link" Name="Hide_This_Link" />
+          <FieldRef ID="{5DB9CE98-26E7-4A64-B8AD-A10D626BFCE1}" DisplayName="Parent Link" Required="FALSE" Name="Parent_Link" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field Group="NICT Site Columns" Type="URL" DisplayName="Link Url" ID="{3C15F97D-5EF1-4EA0-B5D9-71C36451D1D0}"  Name="LinkUrl" Format="Hyperlink" Required="FALSE"  />
+      <Field Group="NICT Site Columns" Type="Lookup"  DisplayName="Parent Link" ID="{5DB9CE98-26E7-4A64-B8AD-A10D626BFCE1}" List="Self" Name="Parent_Link" Required="FALSE" SourceID="{8c90da64-7409-44d8-a2bc-51f211cea490}"/>
+      <Field Group="NICT Site Columns" Type="Number" DisplayName ="Navigation Level" Required="FALSE" ID="{D297A1DE-8A9D-4D56-9D8D-50B33721332A}" StaticName="Navigation_Level" Name ="Navigation_Level" />
+      <Field Group="NICT Site Columns" Type="Number" DisplayName ="Sort Sequence" Required="TRUE" ID="{2095AB68-B343-449A-ACF1-A5F183CC0BBA}" StaticName="Sort_Sequence" Name ="Sort_Sequence" />
+      <Field Group="NICT Site Columns" Type="Boolean" DisplayName="Open In New Window" ID="{147EAA42-D052-474E-A08B-0C7847BA3D4E}" Name="Open_In_New_Window">
+        <Default>0</Default>
+      </Field>
+      <Field Group="NICT Site Columns" Type="Boolean" DisplayName="Hide This Link" ID="{F0893924-EB69-4E24-869A-BEFA256DA474}" Name="Hide_This_Link">
+        <Default>0</Default>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu" />
+          <FieldRef Name="Sort_Sequence" />
+          <FieldRef Name="LinkUrl" />
+          <FieldRef Name="Open_In_New_Window" />
+          <FieldRef Name="Navigation_Level" />
+          <FieldRef Name="Hide_This_Link" />
+          <FieldRef Name="Parent_Link" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="Attachments"></FieldRef>
+          <FieldRef Name="LinkTitle"></FieldRef>
+          <FieldRef Name="LinkTitleNoMenu" />
+          <FieldRef Name="Sort_Sequence" />
+          <FieldRef Name="LinkUrl" />
+          <FieldRef Name="Open_In_New_Window" />
+          <FieldRef Name="Navigation_Level" />
+          <FieldRef Name="Hide_This_Link" />
+          <FieldRef Name="Parent_Link" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>
